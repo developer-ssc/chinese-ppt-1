@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>六國論 — 蘇洵</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- ========== SLIDE CONTAINER ========== -->
+<div id="presentation">
+
+  <!-- ===== SLIDE 1: TITLE ===== -->
+  <section class="slide active" id="slide-1" data-bg="bg-ink">
+    <div class="slide-inner center-all">
+      <div class="title-stamp">論</div>
+      <h1 class="main-title">六國論</h1>
+      <p class="subtitle">蘇洵 著</p>
+      <div class="tag-row">
+        <span class="tag red">借古諷今</span>
+        <span class="tag gold">議論文</span>
+        <span class="tag blue">中四必讀</span>
+      </div>
+      <div class="author-card">
+        <img src="images/su_xun.jpg" alt="蘇洵畫像" class="author-img" />
+        <div>
+          <p class="author-name">蘇洵（1009–1066）</p>
+          <p class="author-desc">字明允，眉州眉山人<br/>「唐宋八大家」之一</p>
+        </div>
+      </div>
+      <div class="scroll-hint">▼ 按空白鍵 / 點擊繼續</div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 2: BACKGROUND ===== -->
+  <section class="slide" id="slide-2" data-bg="bg-parchment">
+    <div class="slide-inner">
+      <h2 class="slide-title">📜 時代背景</h2>
+      <div class="two-col">
+        <div class="col-text">
+          <div class="info-box red-box">
+            <h3>🏛️ 戰國時代（前475–前221）</h3>
+            <p>七雄並立：<strong>秦、韓、趙、魏、楚、燕、齊</strong><br/>
+            最終由秦統一天下</p>
+          </div>
+          <div class="info-box blue-box">
+            <h3>📅 北宋時代（蘇洵生活年代）</h3>
+            <p>宋室積弱，每年向<strong>契丹、西夏</strong>繳納大量銀絹，<br/>
+            以求和平——歷史驚人地相似！</p>
+          </div>
+          <div class="info-box gold-box">
+            <h3>✍️ 寫作目的</h3>
+            <p>借六國賂秦之事，<strong>諷諭宋朝統治者</strong><br/>
+            不應以財物換取和平，應積極抗敵</p>
+          </div>
+        </div>
+        <div class="col-img">
+          <img src="images/map_six_states.webp" alt="戰國七雄地圖" class="map-img" />
+          <p class="img-caption">戰國七雄形勢圖（約公元前260年）</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 3: THESIS ===== -->
+  <section class="slide" id="slide-3" data-bg="bg-dark-red">
+    <div class="slide-inner center-all">
+      <h2 class="slide-title white">🎯 核心論點</h2>
+      <div class="thesis-box">
+        <p class="thesis-text">「六國破滅，</p>
+        <p class="thesis-text">非兵不利，戰不善，</p>
+        <p class="thesis-highlight">弊在賂秦。」</p>
+      </div>
+      <div class="thesis-breakdown">
+        <div class="breakdown-item">
+          <div class="breakdown-icon">❌</div>
+          <p>不是因為<br/><strong>兵器不利</strong></p>
+        </div>
+        <div class="breakdown-arrow">→</div>
+        <div class="breakdown-item">
+          <div class="breakdown-icon">❌</div>
+          <p>不是因為<br/><strong>作戰失誤</strong></p>
+        </div>
+        <div class="breakdown-arrow">→</div>
+        <div class="breakdown-item highlight-item">
+          <div class="breakdown-icon">✅</div>
+          <p>真正原因：<br/><strong>割地賄賂秦國</strong></p>
+        </div>
+      </div>
+      <div class="two-sub-points">
+        <div class="sub-point">
+          <span class="sub-num">①</span>
+          <p>賂秦者：韓、魏、楚<br/><em>直接因賂秦而亡</em></p>
+        </div>
+        <div class="sub-point">
+          <span class="sub-num">②</span>
+          <p>不賂者：燕、趙、齊<br/><em>因失去強援而亡</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 4: SIX STATES TABLE ===== -->
+  <section class="slide" id="slide-4" data-bg="bg-parchment">
+    <div class="slide-inner">
+      <h2 class="slide-title">⚔️ 六國滅亡原因一覽</h2>
+      <div class="states-grid">
+        <div class="state-card red-card">
+          <div class="state-name">韓</div>
+          <div class="state-badge bribe">賂秦</div>
+          <p>割地求安，最先被滅（前230年）</p>
+        </div>
+        <div class="state-card red-card">
+          <div class="state-name">魏</div>
+          <div class="state-badge bribe">賂秦</div>
+          <p>屢割城邑，國力大損（前225年）</p>
+        </div>
+        <div class="state-card red-card">
+          <div class="state-name">楚</div>
+          <div class="state-badge bribe">賂秦</div>
+          <p>割地求和，終難倖免（前223年）</p>
+        </div>
+        <div class="state-card blue-card">
+          <div class="state-name">齊</div>
+          <div class="state-badge ally">附秦</div>
+          <p>與秦結盟，不助五國，孤立無援（前221年）</p>
+        </div>
+        <div class="state-card blue-card">
+          <div class="state-name">燕</div>
+          <div class="state-badge reckless">輕舉妄動</div>
+          <p>派荊軻刺秦王，反而加速滅亡（前222年）</p>
+        </div>
+        <div class="state-card blue-card">
+          <div class="state-name">趙</div>
+          <div class="state-badge slander">誤信讒言</div>
+          <p>誅殺良將李牧，自毀長城（前228年）</p>
+        </div>
+      </div>
+      <div class="common-cause">
+        <p>🔗 共同根源：賂秦使秦國壯大，令不賂者亦勢孤力弱</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 5: CHART - LAND LOSS ===== -->
+  <section class="slide" id="slide-5" data-bg="bg-dark">
+    <div class="slide-inner">
+      <h2 class="slide-title white">📊 賂秦 vs 戰敗：土地得失比較</h2>
+      <div class="chart-container-wrap">
+        <canvas id="landChart"></canvas>
+      </div>
+      <div class="chart-insight">
+        <div class="insight-box">
+          <p>🔺 秦國因賂秦所得土地<br/>= 戰勝所得的 <strong class="big-num">100倍</strong></p>
+        </div>
+        <div class="insight-box">
+          <p>🔻 六國因賂秦所失土地<br/>= 戰敗所失的 <strong class="big-num">100倍</strong></p>
+        </div>
+      </div>
+      <blockquote class="quote-box">
+        「較秦之所得與戰勝而得者，其實百倍；<br/>
+        諸侯之所亡與戰敗而亡者，其實亦百倍。」
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 6: FIRE ANALOGY ===== -->
+  <section class="slide" id="slide-6" data-bg="bg-fire">
+    <div class="slide-inner center-all">
+      <h2 class="slide-title white">🔥 經典比喻：抱薪救火</h2>
+      <div class="analogy-container">
+        <div class="analogy-step">
+          <div class="analogy-icon">🪵</div>
+          <p>六國割地給秦<br/>（薪 = 土地）</p>
+        </div>
+        <div class="analogy-arrow-big">➡️</div>
+        <div class="analogy-step">
+          <div class="analogy-icon">🔥</div>
+          <p>秦國越來越強<br/>（火越燒越旺）</p>
+        </div>
+        <div class="analogy-arrow-big">➡️</div>
+        <div class="analogy-step danger-step">
+          <div class="analogy-icon">💀</div>
+          <p>六國加速滅亡<br/>（薪盡人亡）</p>
+        </div>
+      </div>
+      <div class="quote-fire">
+        「以地事秦，猶<span class="highlight-word">抱薪救火</span>，<br/>
+        薪不盡，火不滅。」
+      </div>
+      <div class="modern-link">
+        <p>💡 <strong>現代版：</strong>就像你每次被人欺負都給錢，對方只會越來越大膽！</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 7: TIMELINE ===== -->
+  <section class="slide" id="slide-7" data-bg="bg-parchment">
+    <div class="slide-inner">
+      <h2 class="slide-title">📅 秦滅六國時間軸</h2>
+      <div class="timeline">
+        <div class="timeline-item" style="--color:#e74c3c">
+          <div class="tl-year">前230年</div>
+          <div class="tl-dot" style="background:#e74c3c"></div>
+          <div class="tl-content">
+            <strong>韓</strong>滅亡
+            <p>首個被滅，割地最多</p>
+          </div>
+        </div>
+        <div class="timeline-item" style="--color:#8e44ad">
+          <div class="tl-year">前228年</div>
+          <div class="tl-dot" style="background:#8e44ad"></div>
+          <div class="tl-content">
+            <strong>趙</strong>滅亡
+            <p>李牧被誅，邯鄲陷落</p>
+          </div>
+        </div>
+        <div class="timeline-item" style="--color:#2980b9">
+          <div class="tl-year">前225年</div>
+          <div class="tl-dot" style="background:#2980b9"></div>
+          <div class="tl-content">
+            <strong>魏</strong>滅亡
+            <p>大梁被水攻，城破</p>
+          </div>
+        </div>
+        <div class="timeline-item" style="--color:#27ae60">
+          <div class="tl-year">前223年</div>
+          <div class="tl-dot" style="background:#27ae60"></div>
+          <div class="tl-content">
+            <strong>楚</strong>滅亡
+            <p>王翦率60萬大軍滅楚</p>
+          </div>
+        </div>
+        <div class="timeline-item" style="--color:#f39c12">
+          <div class="tl-year">前222年</div>
+          <div class="tl-dot" style="background:#f39c12"></div>
+          <div class="tl-content">
+            <strong>燕</strong>滅亡
+            <p>荊軻刺秦失敗，加速滅亡</p>
+          </div>
+        </div>
+        <div class="timeline-item" style="--color:#16a085">
+          <div class="tl-year">前221年</div>
+          <div class="tl-dot" style="background:#16a085"></div>
+          <div class="tl-content">
+            <strong>齊</strong>滅亡
+            <p>附秦不助五國，最後孤立</p>
+          </div>
+        </div>
+        <div class="timeline-item final-item">
+          <div class="tl-year">前221年</div>
+          <div class="tl-dot" style="background:#c0392b;width:24px;height:24px;margin-left:-4px"></div>
+          <div class="tl-content final-content">
+            <strong>🏆 秦統一天下</strong>
+            <p>秦始皇建立中國第一個大一統帝國</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 8: JING KE ===== -->
+  <section class="slide" id="slide-8" data-bg="bg-dark">
+    <div class="slide-inner">
+      <h2 class="slide-title white">🗡️ 燕國的致命錯誤：荊軻刺秦王</h2>
+      <div class="two-col">
+        <div class="col-text">
+          <div class="event-flow">
+            <div class="event-step">
+              <span class="step-num">1</span>
+              <p>燕太子丹不滿秦國威脅，決定派刺客</p>
+            </div>
+            <div class="step-arrow">↓</div>
+            <div class="event-step">
+              <span class="step-num">2</span>
+              <p>荊軻假裝獻地圖，藏匕首入秦宮</p>
+            </div>
+            <div class="step-arrow">↓</div>
+            <div class="event-step">
+              <span class="step-num">3</span>
+              <p>「圖窮匕見」——刺殺失敗，荊軻被殺</p>
+            </div>
+            <div class="step-arrow">↓</div>
+            <div class="event-step danger">
+              <span class="step-num">4</span>
+              <p>秦王大怒，加速出兵滅燕！</p>
+            </div>
+          </div>
+          <div class="lesson-box">
+            <p>📌 蘇洵評語：「至丹以荊卿為計，<strong>始速禍焉</strong>」<br/>
+            ——此舉非但無益，反而加速了滅亡</p>
+          </div>
+        </div>
+        <div class="col-img">
+          <img src="images/jing_ke.jpg" alt="荊軻刺秦王" class="event-img" />
+          <p class="img-caption">荊軻刺秦王（歷史畫）</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 9: LI MU ===== -->
+  <section class="slide" id="slide-9" data-bg="bg-parchment">
+    <div class="slide-inner">
+      <h2 class="slide-title">🛡️ 趙國的悲劇：誅殺良將李牧</h2>
+      <div class="two-col">
+        <div class="col-img">
+          <img src="images/li_mu.jpg" alt="李牧" class="event-img" />
+          <p class="img-caption">李牧——戰國四大名將之一</p>
+        </div>
+        <div class="col-text">
+          <div class="stats-row">
+            <div class="stat-card green">
+              <div class="stat-num">3</div>
+              <div class="stat-label">李牧勝秦次數</div>
+            </div>
+            <div class="stat-card red">
+              <div class="stat-num">2</div>
+              <div class="stat-label">趙國敗秦次數</div>
+            </div>
+          </div>
+          <div class="info-box red-box">
+            <h3>😱 悲劇發生</h3>
+            <p>秦國用反間計，令趙王誤信讒言，<br/>
+            <strong>誅殺了最強大將李牧</strong></p>
+          </div>
+          <div class="info-box gold-box">
+            <h3>💔 後果</h3>
+            <p>失去李牧後，趙國無力抵抗，<br/>
+            首都邯鄲迅速淪陷，趙國滅亡</p>
+          </div>
+          <blockquote class="small-quote">
+            「惜其用武而不終也」——蘇洵
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 10: WHAT IF ===== -->
+  <section class="slide" id="slide-10" data-bg="bg-dark-blue">
+    <div class="slide-inner center-all">
+      <h2 class="slide-title white">🤔 假如歷史可以改寫……</h2>
+      <div class="whatif-container">
+        <div class="whatif-condition">
+          <h3>如果……</h3>
+          <ul>
+            <li>✅ 韓、魏、楚<strong>不割地賂秦</strong></li>
+            <li>✅ 齊國<strong>不附秦，助五國</strong></li>
+            <li>✅ 燕國<strong>不派荊軻</strong></li>
+            <li>✅ 趙國<strong>保留李牧</strong></li>
+          </ul>
+        </div>
+        <div class="whatif-arrow">⟹</div>
+        <div class="whatif-result">
+          <h3>那麼……</h3>
+          <p class="result-text">六國合力西向，<br/>
+          秦人<span class="highlight-word">「食之不得下嚥」</span>！</p>
+          <p class="result-sub">（秦國寢食難安，未必能統一！）</p>
+        </div>
+      </div>
+      <div class="moral-box">
+        <p>📚 <strong>蘇洵的結論：</strong>六國本有勝秦之道，卻被秦國的積威所嚇倒，<br/>
+        一步步走向滅亡——<em>完全是自己造成的！</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 11: COUNTER-STRATEGY ===== -->
+  <section class="slide" id="slide-11" data-bg="bg-gold">
+    <div class="slide-inner center-all">
+      <h2 class="slide-title dark">💡 蘇洵的抗秦方案</h2>
+      <div class="strategy-grid">
+        <div class="strategy-card">
+          <div class="strategy-icon">🏆</div>
+          <h3>以賂秦之地</h3>
+          <p>→ 封天下之<strong>謀臣</strong></p>
+          <p class="strategy-explain">把割讓的土地，用來獎賞有謀略的臣子</p>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-icon">🌟</div>
+          <h3>以事秦之心</h3>
+          <p>→ 禮天下之<strong>奇才</strong></p>
+          <p class="strategy-explain">把侍奉秦國的心思，用來招攬天下人才</p>
+        </div>
+        <div class="strategy-card highlight-strategy">
+          <div class="strategy-icon">⚔️</div>
+          <h3>並力西向</h3>
+          <p>→ 六國<strong>合力抗秦</strong></p>
+          <p class="strategy-explain">六國團結一致，共同對抗秦國</p>
+        </div>
+      </div>
+      <div class="vs-comparison">
+        <div class="vs-item bad">
+          <p>❌ 實際做法</p>
+          <p>割地賂秦，各自為政</p>
+        </div>
+        <div class="vs-mid">VS</div>
+        <div class="vs-item good">
+          <p>✅ 應有做法</p>
+          <p>合縱抗秦，共禦外敵</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 12: MODERN PARALLEL ===== -->
+  <section class="slide" id="slide-12" data-bg="bg-dark-red">
+    <div class="slide-inner center-all">
+      <h2 class="slide-title white">🔄 借古諷今：宋朝的問題</h2>
+      <div class="parallel-table-wrap">
+        <table class="parallel-table">
+          <thead>
+            <tr>
+              <th>🏛️ 戰國六國</th>
+              <th>對應</th>
+              <th>🏯 北宋</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>割地賂秦</td>
+              <td>≈</td>
+              <td>歲幣賂契丹、西夏</td>
+            </tr>
+            <tr>
+              <td>秦國（強敵）</td>
+              <td>≈</td>
+              <td>契丹 / 西夏</td>
+            </tr>
+            <tr>
+              <td>六國（弱方）</td>
+              <td>≈</td>
+              <td>北宋</td>
+            </tr>
+            <tr>
+              <td>賂秦而力虧</td>
+              <td>≈</td>
+              <td>歲幣耗盡國力</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>六國最終滅亡</td>
+              <td>⚠️</td>
+              <td>宋朝將步後塵？</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="warning-box">
+        <p>⚠️ 蘇洵警告：「苟以天下之大，而從六國破亡之故事，<br/>
+        <strong>是又在六國下矣！</strong>」</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 13: WRITING TECHNIQUES ===== -->
+  <section class="slide" id="slide-13" data-bg="bg-parchment">
+    <div class="slide-inner">
+      <h2 class="slide-title">✍️ 寫作手法總覽</h2>
+      <div class="techniques-grid">
+        <div class="tech-card">
+          <div class="tech-icon">🔄</div>
+          <h3>破立法</h3>
+          <p>先否定「兵不利、戰不善」，再立「弊在賂秦」</p>
+          <div class="tech-example">「非兵不利，戰不善，弊在賂秦」</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">⚖️</div>
+          <h3>對比手法</h3>
+          <p>祖先創業之艱辛 vs 子孫輕易割地</p>
+          <div class="tech-example">「暴霜露，斬荊棘」vs「如棄草芥」</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🎭</div>
+          <h3>比喻</h3>
+          <p>用「抱薪救火」形象說明賂秦之弊</p>
+          <div class="tech-example">「猶抱薪救火，薪不盡，火不滅」</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">❓</div>
+          <h3>設問</h3>
+          <p>自問自答，引導讀者思考</p>
+          <div class="tech-example">「六國互喪，率賂秦耶？」</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🔢</div>
+          <h3>排偶</h3>
+          <p>對仗工整，增強氣勢</p>
+          <div class="tech-example">「秦之所得…百倍；諸侯之所亡…亦百倍」</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">💭</div>
+          <h3>設例論證</h3>
+          <p>假設六國合力抗秦，反證賂秦之弊</p>
+          <div class="tech-example">「向使三國各愛其地……」</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 14: STRUCTURE ===== -->
+  <section class="slide" id="slide-14" data-bg="bg-dark">
+    <div class="slide-inner">
+      <h2 class="slide-title white">🗂️ 文章結構圖</h2>
+      <div class="structure-diagram">
+        <div class="struct-node main-node">
+          <strong>論點：弊在賂秦</strong>
+        </div>
+        <div class="struct-branches">
+          <div class="struct-branch">
+            <div class="struct-connector"></div>
+            <div class="struct-child red-node">
+              <strong>第二段（正面）</strong>
+              <p>賂秦必亡之由</p>
+              <ul>
+                <li>壯大敵人（百倍）</li>
+                <li>自我削弱（百倍）</li>
+                <li>比喻：抱薪救火</li>
+              </ul>
+            </div>
+          </div>
+          <div class="struct-branch">
+            <div class="struct-connector"></div>
+            <div class="struct-child blue-node">
+              <strong>第三段（反面）</strong>
+              <p>不賂者亦亡之由</p>
+              <ul>
+                <li>齊：附秦不助五國</li>
+                <li>燕：荊軻刺秦失敗</li>
+                <li>趙：誅殺李牧</li>
+              </ul>
+            </div>
+          </div>
+          <div class="struct-branch">
+            <div class="struct-connector"></div>
+            <div class="struct-child gold-node">
+              <strong>第四段</strong>
+              <p>合力抗秦之法</p>
+              <ul>
+                <li>封謀臣、禮奇才</li>
+                <li>並力西向</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="struct-conclusion">
+          <strong>第五段：借古諷今</strong>
+          <p>宋朝若重蹈六國覆轍，更在六國之下！</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 15: QUIZ ===== -->
+  <section class="slide" id="slide-15" data-bg="bg-quiz">
+    <div class="slide-inner center-all">
+      <h2 class="slide-title white">🎮 快速測驗！</h2>
+      <div id="quiz-container">
+        <div class="quiz-progress">題目 <span id="q-current">1</span> / <span id="q-total">4</span></div>
+        <div id="question-box" class="question-box">
+          <p id="question-text" class="question-text"></p>
+          <div id="options-container" class="options-container"></div>
+        </div>
+        <div id="quiz-result" class="quiz-result hidden">
+          <p id="result-text"></p>
+          <button id="next-btn" class="quiz-btn">下一題 ▶</button>
+        </div>
+        <div id="quiz-final" class="quiz-final hidden">
+          <p>🎉 測驗完成！</p>
+          <p>你答對了 <span id="final-score" class="score-num"></span> / 4 題</p>
+          <button id="restart-btn" class="quiz-btn">重新挑戰 🔄</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 16: SUMMARY ===== -->
+  <section class="slide" id="slide-16" data-bg="bg-ink">
+    <div class="slide-inner center-all">
+      <h2 class="slide-title white">📝 重點總結</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <span class="sum-num">1</span>
+          <p><strong>論點：</strong>六國破滅，弊在賂秦</p>
+        </div>
+        <div class="summary-item">
+          <span class="sum-num">2</span>
+          <p><strong>賂秦者：</strong>韓魏楚直接因割地而亡</p>
+        </div>
+        <div class="summary-item">
+          <span class="sum-num">3</span>
+          <p><strong>不賂者：</strong>齊燕趙因失強援而亡</p>
+        </div>
+        <div class="summary-item">
+          <span class="sum-num">4</span>
+          <p><strong>比喻：</strong>抱薪救火——越賂越危</p>
+        </div>
+        <div class="summary-item">
+          <span class="sum-num">5</span>
+          <p><strong>解決方案：</strong>封謀臣、禮奇才、並力西向</p>
+        </div>
+        <div class="summary-item highlight-sum">
+          <span class="sum-num">6</span>
+          <p><strong>借古諷今：</strong>警惕宋朝勿重蹈六國覆轍</p>
+        </div>
+      </div>
+      <div class="final-quote">
+        「為國者無使為積威之所劫哉！」
+        <p class="final-author">—— 蘇洵</p>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end #presentation -->
+
+<!-- ========== NAVIGATION ========== -->
+<div id="nav-bar">
+  <button id="prev-btn" onclick="changeSlide(-1)">◀ 上一頁</button>
+  <div id="slide-counter">
+    <span id="current-slide">1</span> / <span id="total-slides">16</span>
+  </div>
+  <button id="next-btn-nav" onclick="changeSlide(1)">下一頁 ▶</button>
+</div>
+
+<!-- Progress bar -->
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<!-- Slide dots -->
+<div id="slide-dots"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
