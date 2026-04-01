@@ -120,6 +120,67 @@
   .bg-gold .strategy-explain { color: var(--brown) !important; }
   .bg-gold .vs-item p { color: var(--dark-brown) !important; }
   .bg-gold .vs-mid { color: var(--dark-brown) !important; }
+  /* === 用CSS屬性選擇器直接設定背景，不依賴JS === */
+  .slide[data-bg="bg-ink"] {
+    background: radial-gradient(ellipse at 30% 30%, rgba(80,40,10,0.4) 0%, transparent 60%),
+                linear-gradient(160deg, #1c1008 0%, #2c1810 50%, #1c1008 100%) !important;
+  }
+  .slide[data-bg="bg-parchment"] {
+    background: radial-gradient(ellipse at 10% 10%, rgba(180,140,60,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 90%, rgba(180,140,60,0.08) 0%, transparent 50%),
+                linear-gradient(160deg, #fdf8ee 0%, #f5e6c8 40%, #ede0b8 100%) !important;
+  }
+  .slide[data-bg="bg-vermilion"] {
+    background: radial-gradient(ellipse at 20% 20%, rgba(255,200,150,0.15) 0%, transparent 50%),
+                linear-gradient(160deg, #7b1a1a 0%, #a52020 40%, #8b1a1a 100%) !important;
+  }
+  .slide[data-bg="bg-dark-red"] {
+    background: radial-gradient(ellipse at 20% 20%, rgba(255,200,150,0.15) 0%, transparent 50%),
+                linear-gradient(160deg, #7b1a1a 0%, #a52020 40%, #8b1a1a 100%) !important;
+  }
+  .slide[data-bg="bg-dark"] {
+    background: radial-gradient(ellipse at 70% 30%, rgba(100,50,10,0.3) 0%, transparent 60%),
+                linear-gradient(160deg, #2c1810 0%, #3a2010 50%, #2c1810 100%) !important;
+  }
+  .slide[data-bg="bg-fire"] {
+    background: radial-gradient(ellipse at 50% 80%, rgba(255,150,50,0.2) 0%, transparent 60%),
+                linear-gradient(160deg, #3a0a00 0%, #7b1a00 40%, #a52020 70%, #8b1a1a 100%) !important;
+  }
+  .slide[data-bg="bg-dark-blue"] {
+    background: radial-gradient(ellipse at 30% 30%, rgba(50,80,120,0.3) 0%, transparent 60%),
+                linear-gradient(160deg, #0a1020 0%, #1a2c5c 50%, #0a1020 100%) !important;
+  }
+  .slide[data-bg="bg-gold"] {
+    background: radial-gradient(ellipse at 50% 20%, rgba(255,220,100,0.3) 0%, transparent 60%),
+                linear-gradient(160deg, #5c3d00 0%, #8b6914 40%, #b8860b 70%, #d4a017 100%) !important;
+  }
+  .slide[data-bg="bg-quiz"] {
+    background: radial-gradient(ellipse at 50% 50%, rgba(80,40,10,0.3) 0%, transparent 60%),
+                linear-gradient(160deg, #1c1008 0%, #3a2010 50%, #2c1810 100%) !important;
+  }
+  /* 深色data-bg頁面的文字 */
+  .slide[data-bg="bg-ink"] .slide-title,
+  .slide[data-bg="bg-dark"] .slide-title,
+  .slide[data-bg="bg-fire"] .slide-title,
+  .slide[data-bg="bg-dark-blue"] .slide-title,
+  .slide[data-bg="bg-quiz"] .slide-title,
+  .slide[data-bg="bg-vermilion"] .slide-title,
+  .slide[data-bg="bg-dark-red"] .slide-title { color: #f5e6c8 !important; border-left-color: #d4a017 !important; }
+  /* 宣紙頁面文字 */
+  .slide[data-bg="bg-parchment"] .slide-title { color: #3a2010 !important; border-left-color: #c0392b !important; }
+  .slide[data-bg="bg-parchment"] .info-box { color: #3a2010 !important; }
+  .slide[data-bg="bg-parchment"] .info-box p { color: #3a2010 !important; }
+  .slide[data-bg="bg-parchment"] .info-box h3 { color: #3a2010 !important; }
+  .slide[data-bg="bg-parchment"] .red-box h3 { color: #c0392b !important; }
+  .slide[data-bg="bg-parchment"] .blue-box h3 { color: #1a2c5c !important; }
+  .slide[data-bg="bg-parchment"] .gold-box h3 { color: #8b6914 !important; }
+  /* 金色頁面文字 */
+  .slide[data-bg="bg-gold"] .slide-title { color: #3a2010 !important; border-left-color: #3a2010 !important; }
+  .slide[data-bg="bg-gold"] .strategy-card h3 { color: #3a2010 !important; }
+  .slide[data-bg="bg-gold"] .strategy-card p { color: #3a2010 !important; }
+  .slide[data-bg="bg-gold"] .strategy-explain { color: #5c3d1e !important; }
+  .slide[data-bg="bg-gold"] .vs-item p { color: #3a2010 !important; }
+  .slide[data-bg="bg-gold"] .vs-mid { color: #3a2010 !important; }
   </style>
 </head>
 <body>
