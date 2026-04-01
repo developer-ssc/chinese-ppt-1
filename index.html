@@ -4,8 +4,123 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>六國論 — 蘇洵</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+  /* === 古代風格覆蓋層 — 確保文字清晰可見 === */
+  :root {
+    --vermilion: #c0392b;
+    --deep-red: #8b1a1a;
+    --gold: #b8860b;
+    --bright-gold: #d4a017;
+    --ink: #1c1008;
+    --dark-ink: #2c1810;
+    --parchment: #f5e6c8;
+    --parchment-2: #ede0b8;
+    --rice: #fdf8ee;
+    --brown: #5c3d1e;
+    --dark-brown: #3a2010;
+    --teal: #1a5c5c;
+    --navy: #1a2c5c;
+    --jade: #2e7d5c;
+  }
+  html, body { background: var(--parchment); }
+  .info-box { color: var(--dark-brown) !important; }
+  .info-box p { color: var(--dark-brown) !important; }
+  .info-box h3 { color: inherit; }
+  .red-box  { background: rgba(139,26,26,0.1) !important; border-color: var(--vermilion) !important; color: var(--dark-brown) !important; }
+  .red-box h3 { color: var(--vermilion) !important; }
+  .blue-box { background: rgba(26,44,92,0.1) !important; border-color: var(--navy) !important; color: var(--dark-brown) !important; }
+  .blue-box h3 { color: var(--navy) !important; }
+  .gold-box { background: rgba(184,134,11,0.1) !important; border-color: var(--gold) !important; color: var(--dark-brown) !important; }
+  .gold-box h3 { color: var(--gold) !important; }
+  /* 宣紙背景 */
+  .bg-parchment {
+    background: radial-gradient(ellipse at 10% 10%, rgba(180,140,60,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 90%, rgba(180,140,60,0.08) 0%, transparent 50%),
+                linear-gradient(160deg, #fdf8ee 0%, #f5e6c8 40%, #ede0b8 100%) !important;
+  }
+  /* 朱紅背景 */
+  .bg-vermilion, .bg-dark-red {
+    background: radial-gradient(ellipse at 20% 20%, rgba(255,200,150,0.15) 0%, transparent 50%),
+                linear-gradient(160deg, #7b1a1a 0%, #a52020 40%, #8b1a1a 100%) !important;
+  }
+  /* 墨色背景 */
+  .bg-ink {
+    background: radial-gradient(ellipse at 30% 30%, rgba(80,40,10,0.4) 0%, transparent 60%),
+                linear-gradient(160deg, #1c1008 0%, #2c1810 50%, #1c1008 100%) !important;
+  }
+  /* 深棕背景 */
+  .bg-dark {
+    background: radial-gradient(ellipse at 70% 30%, rgba(100,50,10,0.3) 0%, transparent 60%),
+                linear-gradient(160deg, #2c1810 0%, #3a2010 50%, #2c1810 100%) !important;
+  }
+  /* 火焰背景 */
+  .bg-fire {
+    background: radial-gradient(ellipse at 50% 80%, rgba(255,150,50,0.2) 0%, transparent 60%),
+                linear-gradient(160deg, #3a0a00 0%, #7b1a00 40%, #a52020 70%, #8b1a1a 100%) !important;
+  }
+  /* 深藍背景 */
+  .bg-dark-blue {
+    background: radial-gradient(ellipse at 30% 30%, rgba(50,80,120,0.3) 0%, transparent 60%),
+                linear-gradient(160deg, #0a1020 0%, #1a2c5c 50%, #0a1020 100%) !important;
+  }
+  /* 金色背景 */
+  .bg-gold {
+    background: radial-gradient(ellipse at 50% 20%, rgba(255,220,100,0.3) 0%, transparent 60%),
+                linear-gradient(160deg, #5c3d00 0%, #8b6914 40%, #b8860b 70%, #d4a017 100%) !important;
+  }
+  /* 測驗背景 */
+  .bg-quiz {
+    background: radial-gradient(ellipse at 50% 50%, rgba(80,40,10,0.3) 0%, transparent 60%),
+                linear-gradient(160deg, #1c1008 0%, #3a2010 50%, #2c1810 100%) !important;
+  }
+  /* 宣紙頁文字 */
+  .bg-parchment .slide-title { color: var(--dark-brown) !important; border-left-color: var(--vermilion) !important; }
+  .bg-parchment .state-name { color: var(--dark-brown); }
+  .bg-parchment .red-card .state-name { color: var(--vermilion) !important; }
+  .bg-parchment .blue-card .state-name { color: var(--navy) !important; }
+  .bg-parchment .state-card p { color: var(--brown) !important; }
+  .bg-parchment .common-cause { color: var(--dark-brown) !important; }
+  .bg-parchment .tl-year { color: var(--dark-brown) !important; }
+  .bg-parchment .tl-content strong { color: var(--dark-brown) !important; }
+  .bg-parchment .tl-content p { color: var(--brown) !important; }
+  .bg-parchment .stat-label { color: var(--brown) !important; }
+  .bg-parchment .small-quote { color: var(--brown) !important; }
+  .bg-parchment .tech-card h3 { color: var(--dark-brown) !important; }
+  .bg-parchment .tech-card p { color: var(--brown) !important; }
+  .bg-parchment .tech-example { color: var(--dark-brown) !important; }
+  /* 深色背景文字 */
+  .bg-ink .slide-title,
+  .bg-dark .slide-title,
+  .bg-fire .slide-title,
+  .bg-dark-blue .slide-title,
+  .bg-quiz .slide-title,
+  .bg-vermilion .slide-title,
+  .bg-dark-red .slide-title { color: #f5e6c8 !important; border-left-color: #d4a017 !important; }
+  /* 導航欄 */
+  #nav-bar { background: rgba(28,16,8,0.9) !important; border: 1px solid rgba(212,160,23,0.4) !important; }
+  #nav-bar button { color: rgba(245,230,200,0.9) !important; border-color: rgba(212,160,23,0.35) !important; }
+  #slide-counter { color: rgba(245,230,200,0.75) !important; }
+  /* 進度條 */
+  #progress-fill { background: linear-gradient(90deg, #c0392b, #d4a017) !important; }
+  /* 導航點 */
+  .dot { background: rgba(184,134,11,0.35) !important; border: 1px solid rgba(184,134,11,0.5) !important; }
+  .dot.active { background: #d4a017 !important; }
+  /* 標題頁 */
+  .main-title { color: #d4a017 !important; }
+  .subtitle { color: rgba(245,230,200,0.9) !important; }
+  .author-name { color: #d4a017 !important; }
+  .author-desc { color: rgba(245,230,200,0.8) !important; }
+  .scroll-hint { color: rgba(245,230,200,0.45) !important; }
+  /* 金色背景頁 */
+  .bg-gold .slide-title { color: var(--dark-brown) !important; border-left-color: var(--dark-brown) !important; }
+  .bg-gold .strategy-card h3 { color: var(--dark-brown) !important; }
+  .bg-gold .strategy-card p { color: var(--dark-brown) !important; }
+  .bg-gold .strategy-explain { color: var(--brown) !important; }
+  .bg-gold .vs-item p { color: var(--dark-brown) !important; }
+  .bg-gold .vs-mid { color: var(--dark-brown) !important; }
+  </style>
 </head>
 <body>
 
