@@ -12,6 +12,11 @@ const totalSlides = slides.length;
 
 // ---- Init ----
 document.addEventListener('DOMContentLoaded', () => {
+  // Apply data-bg classes to each slide
+  slides.forEach(slide => {
+    const bg = slide.getAttribute('data-bg');
+    if (bg) slide.classList.add(bg);
+  });
   buildDots();
   updateUI();
   initQuiz();
