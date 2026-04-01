@@ -116,16 +116,16 @@ function initLandChart() {
         {
           label: '賂秦所得/所失',
           data: [100, 100],
-          backgroundColor: ['rgba(192,57,43,0.8)', 'rgba(41,128,185,0.8)'],
-          borderColor: ['#c0392b', '#2980b9'],
+          backgroundColor: ['rgba(192,57,43,0.85)', 'rgba(26,44,92,0.85)'],
+          borderColor: ['#c0392b', '#1a2c5c'],
           borderWidth: 2,
           borderRadius: 8,
         },
         {
           label: '戰勝/戰敗所得/所失',
           data: [1, 1],
-          backgroundColor: ['rgba(192,57,43,0.3)', 'rgba(41,128,185,0.3)'],
-          borderColor: ['#c0392b', '#2980b9'],
+          backgroundColor: ['rgba(192,57,43,0.35)', 'rgba(26,44,92,0.35)'],
+          borderColor: ['#c0392b', '#1a2c5c'],
           borderWidth: 2,
           borderRadius: 8,
         }
@@ -136,7 +136,7 @@ function initLandChart() {
       maintainAspectRatio: true,
       plugins: {
         legend: {
-          labels: { color: 'rgba(255,255,255,0.8)', font: { size: 13, family: 'Noto Sans TC' } }
+          labels: { color: 'rgba(245,230,200,0.9)', font: { size: 13, family: 'Noto Serif TC' } }
         },
         tooltip: {
           callbacks: {
@@ -149,20 +149,20 @@ function initLandChart() {
       },
       scales: {
         x: {
-          ticks: { color: 'rgba(255,255,255,0.7)', font: { size: 12, family: 'Noto Sans TC' } },
-          grid: { color: 'rgba(255,255,255,0.1)' }
+          ticks: { color: 'rgba(245,230,200,0.85)', font: { size: 12, family: 'Noto Serif TC' } },
+          grid: { color: 'rgba(245,230,200,0.1)' }
         },
         y: {
           ticks: {
-            color: 'rgba(255,255,255,0.7)',
-            font: { size: 12, family: 'Noto Sans TC' },
+            color: 'rgba(245,230,200,0.85)',
+            font: { size: 12, family: 'Noto Serif TC' },
             callback: (v) => v + '份'
           },
-          grid: { color: 'rgba(255,255,255,0.1)' },
+          grid: { color: 'rgba(245,230,200,0.1)' },
           title: {
             display: true,
             text: '土地份量（相對比例）',
-            color: 'rgba(255,255,255,0.6)',
+            color: 'rgba(245,230,200,0.7)',
             font: { size: 12 }
           }
         }
